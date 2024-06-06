@@ -9,19 +9,21 @@ $(document).ready(function() {
 
 function loadEvents() {
     $.ajax({
-        url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/korisnik',
+        url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/events',
         method: 'GET',
         data: {
-            apitoken: 'WbSR4URLbqIzgplzuUoQvJbQxh7bj6xDzxnRuOiZgQNQzAft5wmXqqwytvINM3OtRxnf8nchqeGgT5ZbtWtOqQqb8K'
+            apitoken: 'YOUR_API_TOKEN_HERE'
         },
         success: function(response) {
             displayEvents(response.events);
         },
-        error: function() {
-            alert('Error loading events');
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error("Error details:", textStatus, errorThrown, jqXHR.responseText);
+            alert('Error loading events: ' + jqXHR.responseText);
         }
     });
 }
+
 
 function displayEvents(events) {
     const eventsDiv = $('#events');
