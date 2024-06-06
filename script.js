@@ -44,7 +44,7 @@ function showReservationForm(eventId) {
 
 function reserveTicket() {
     const data = {
-        apitoken: 'YOUR_API_TOKEN_HERE',
+        apitoken: 'WbSR4URLbqIzgplzuUoQvJbQxh7bj6xDzxnRuOiZgQNQzAft5wmXqqwytvINM3OtRxnf8nchqeGgT5ZbtWtOqQqb8K',
         event_id: $('#event-id').val(),
         name: $('#name').val(),
         email: $('#email').val()
