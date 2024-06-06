@@ -44,7 +44,7 @@ function showReservationForm(eventId) {
 
 function reserveTicket() {
     const data = {
-        apitoken: 'WbSR4URLbqIzgplzuUoQvJbQxh7bj6xDzxnRuOiZgQNQzAft5wmXqqwytvINM3OtRxnf8nchqeGgT5ZbtWtOqQqb8K',
+        apitoken: 'YOUR_API_TOKEN_HERE',
         event_id: $('#event-id').val(),
         name: $('#name').val(),
         email: $('#email').val()
@@ -55,6 +55,7 @@ function reserveTicket() {
         method: 'POST',
         data: data,
         success: function(response) {
+            console.log(response); // Log the response to the console
             alert('Reservation successful');
             $('#reservation').hide();
             $('#reservation-form')[0].reset();
@@ -64,3 +65,4 @@ function reserveTicket() {
         }
     });
 }
+
