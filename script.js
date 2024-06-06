@@ -12,7 +12,7 @@ function loadEvents() {
         url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/events',
         method: 'GET',
         data: {
-            apitoken: 'YOUR_API_TOKEN_HERE'
+            apitoken: 'token'
         },
         success: function(response) {
             displayEvents(response.events);
@@ -46,7 +46,7 @@ function showReservationForm(eventId) {
 
 function reserveTicket() {
     const data = {
-        apitoken: 'WbSR4URLbqIzgplzuUoQvJbQxh7bj6xDzxnRuOiZgQNQzAft5wmXqqwytvINM3OtRxnf8nchqeGgT5ZbtWtOqQqb8K',
+        apitoken: 'token',
         event_id: $('#event-id').val(),
         name: $('#name').val(),
         email: $('#email').val()
