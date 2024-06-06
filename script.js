@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 function loadEvents() {
     $.ajax({
-        url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/events',
+        url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/korisnik',
         method: 'GET',
         data: {
             apitoken: 'WbSR4URLbqIzgplzuUoQvJbQxh7bj6xDzxnRuOiZgQNQzAft5wmXqqwytvINM3OtRxnf8nchqeGgT5ZbtWtOqQqb8K'
@@ -51,7 +51,7 @@ function reserveTicket() {
     };
 
     $.ajax({
-        url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/reserve',
+        url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/korisnik',
         method: 'POST',
         data: data,
         success: function(response) {
